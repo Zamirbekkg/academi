@@ -1,0 +1,77 @@
+.students-container {
+    position: relative; // Позволяет использовать абсолютное позиционирование внутри
+    background-color: #dfdfdf;
+    padding: 40px;
+  
+
+    .filter {
+      display: flex;         // Включаем Flexbox
+      justify-content: flex-end; // Расположить элемент справа
+      align-items: center;    // Центрируем по вертикали
+      width: 100%;            // Занимает всю ширину родительского контейнера
+    }
+    
+
+    .students-section {
+      margin-bottom: 40px;
+  
+      h2 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #003f35;
+      }
+  
+      .students-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+  
+        .student-card {
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 8px;
+          text-align: center;
+          transition: transform 0.3s ease;
+  
+          &:hover {
+            transform: scale(1.05);
+          }
+  
+          img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+          }
+  
+          h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 10px 0;
+            color: #003f35;
+          }
+  
+          p {
+            color: #000;
+          }
+  
+          button {
+            background-color: #005f4b;
+            color: #fff;
+            border: none;
+            padding: 10px 40px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+  
+            &:hover {
+              background-color: #003f35;
+            }
+          }
+        }
+      }
+    }
+  }
+  
